@@ -1,0 +1,470 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --text-color: black;
+    --main-color: #ab6e73;
+    --second-bg-color: #ba363e;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    min-height: 100vh
+}
+
+nav {
+    width: 100%;
+    height: 10%;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto;
+}
+
+nav .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav .wrapper .logo img {
+    height: auto;
+    width: 70px; 
+    max-width: 100%;
+}
+
+nav .wrapper .links {
+    display: flex;
+    align-items: center;
+}
+
+nav .wrapper .links a {
+    color: #ab6e73;
+    text-decoration: none;
+    margin: 0 15px;
+    position: relative;
+    font-size: 1.4rem;
+}
+
+nav .wrapper .links a::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 4px;
+    background-color: var(--second-bg-color);
+    width: 0%;
+    transition: 0.3s ease;
+}
+
+nav .wrapper .links a:hover::before {
+    width: 100%;
+}
+
+/* Hero Section */
+section.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px 0;
+    background: #f4f4f4;
+    height: 80vh;
+    flex-wrap: wrap; 
+}
+
+section.hero .content {
+    max-width: 50%;
+    flex: 1 1 300px; 
+    padding: 10px; 
+
+}
+
+section.hero .content h1 {
+    font-size: 4rem;
+    margin: -1rem 0;
+    margin-left: 10%;
+}
+
+section.hero .content h1 span {
+    color: var(--main-color);
+}
+
+section.hero .content p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    margin-left: 10%;
+}
+
+section.hero .content button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background: var(--main-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 0%;
+}
+
+section.hero .content button:hover {
+    background: var(--second-bg-color);
+}
+
+
+
+section.hero .image {
+    position: relative;
+    width: 25vw;
+    max-width: 300px;
+    margin-bottom: 4%;
+    margin-top: 0%;
+    margin-right: 8%; 
+    border-radius: 50%;
+    transition: 0.4s ease-in-out;
+    flex: 1 1 300px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    section.hero {
+        flex-direction: column;
+        justify-content: center; /* Center content vertically */
+    }
+
+    section.hero .image {
+        margin-top: -50%; /* Adjust the top margin */
+        margin-right: 0;
+    }
+}
+
+section.hero .image .box {
+    position: relative; /* Changed from absolute to relative */
+    transition: all 0.3s ease;
+}
+
+section.hero .image .box img {
+    width: 100%;
+    height: auto;
+}
+
+/* Removed unnecessary code */
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    section.hero {
+        flex-direction: column; 
+        height: auto; 
+        padding: 20px 0; 
+    }
+    section.hero .content {
+        max-width: 100%; 
+        text-align: center; 
+        margin: 0;
+    }
+    section.hero .content h1 {
+        margin-left: 0; 
+    }
+    section.hero .content p {
+        margin-left: 0; 
+    }
+    section.hero .image {
+        margin-top: 20px; 
+        margin-right: 0; 
+    }
+}
+
+
+/* Menu Section */
+section.menu {
+    padding: 50px 20px;
+    background: #fff;
+}
+
+section.menu h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+section.menu .menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+section.menu .menu-item {
+    width: 300px;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+section.menu .menu-item img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px; 
+    position: relative; 
+    top: 10px; 
+    object-fit: cover
+}
+
+
+section.menu .menu-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: var(--main-color);
+}
+
+section.menu .menu-item p {
+    padding: 0 15px 20px 15px;
+    font-size: 1rem;
+}
+
+section.menu .menu-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+footer p {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.drink-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.drink-item:hover {
+    transform: scale(1.05);
+}
+
+.drink-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 5%;
+    display: inline-flex;
+}
+
+.drink-info h3 {
+    margin: 0;
+    color: var(--main-color);
+}
+
+.drink-info p {
+    margin: 5px 0 0;
+    color: #333;
+}
+
+
+/* Section Styles */
+section {
+    padding: 50px;
+    background: #f4f4f4;
+}
+
+section .content {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+section .content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+section .content h1 span {
+    color: var(--main-color);
+}
+
+section .content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+section .content h2 span {
+    color: var(--main-color);
+}
+
+section .content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+section .content button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background: var(--main-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+section .content button:hover {
+    background: var(--second-bg-color);
+}
+
+    #hot-drinks h2 {
+
+    font-size: 3rem;
+    color: white;
+    background-color: var(--second-bg-color);
+    padding: 10px; 
+    border-radius: 5px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+    #cold-drinks h2 {
+
+    font-size: 3rem; 
+    color: white; 
+    background-color: var(--second-bg-color);
+    padding: 10px;
+    border-radius: 5px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center; 
+    align-items: center; 
+    width: 100%; 
+    max-width: 1200px; 
+}
+
+.grid-item {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+    text-align: center;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.grid-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    margin-left: 5%;
+    object-fit: cover;
+}
+
+.drink-info p {
+    margin: 5px 0 0;
+    color: #333;
+}
+
+.cold-drinks h2 {
+    font-size: 4rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #f4f4f4;
+    text-align: center;
+    width: 100%
+}
+
+.footer .social-icons {
+    margin-bottom: -20px; /* Margin below social icons for spacing */
+    margin-top: -20px; /* Positive margin to move the container lower */
+}
+
+.footer ul {
+    font-size: 1.3rem;
+    list-style: none;
+    padding: 0;
+    margin: 20px 20px; /* Add margin for spacing */
+    display: flex;
+    gap: 50px; /* Ensure consistent gap between list items */
+}
+
+.footer ul li {
+    display: inline-block;
+}
+
+.footer ul li a {
+    color: var(--main-color);
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease-in-out;
+    text-decoration: none; /* Remove underline */
+}
+
+.footer ul li a:hover {
+    border-bottom: 3px solid var(--second-bg-color);
+    color: var(--second-bg-color);
+}
+
+.footer .copyright {
+    font-size: 16px;
+    color: var(--main-color);
+    margin: 10px 10;
+}
+
+.social-icons {
+    display: flex;
+   align-items: center;
+    gap: 20px; /* Consistent gap between social icons */
+}
+
+.social-icons a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 1rem; /* Adjusted padding for better fit */
+    background: transparent;
+    color: var(--main-color);
+    transition: 0.3s ease;
+    text-decoration: none; 
+}
+
+.social-icons a:hover {
+    color: var(--second-bg-color);
+    transform: scale(1.2) translateY(-5px);
+}
